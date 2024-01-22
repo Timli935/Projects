@@ -2,7 +2,7 @@
 using namespace std;
 
 char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
-int checkwin();
+int checkwin(); //function that checks who wins
 void board();
 
 int main()
@@ -13,9 +13,9 @@ int main()
     {
         board();
         player=(player%2)?1:2;
-        cout << "Player " << player << ", enter a number:  ";
+        cout << "Player " << player << ", enter a number:  "; //prompts for a number
         cin >> choice;
-        mark=(player == 1) ? 'X' : 'O';
+        mark=(player == 1) ? 'X' : 'O'; //checks for empty space and mark it
         if (choice == 1 && square[1] == '1')
             square[1] = mark;
         else if (choice == 2 && square[2] == '2')
@@ -36,25 +36,25 @@ int main()
             square[9] = mark;
         else
         {
-            cout<<"Invalid move ";
+            cout<<"Invalid move "; //ignore repeated moves
             player--;
             cin.ignore();
             cin.get();
         }
-        i=checkwin();
+        i=checkwin(); //check if a player won
         player++;
     }while(i==-1);
     board();
     if(i==1)
         cout<<"==>\aPlayer "<<--player<<" win ";
     else
-        cout<<"==>\aGame draw";
+        cout<<"==>\aGame draw"; //output result
     cin.ignore();
     cin.get();
     return 0;
 }
 /*********************************************
-    FUNCTION TO RETURN GAME STATUS
+    FUNCTION RETURN GAME STATUS
     1 FOR GAME IS OVER WITH RESULT
     -1 FOR GAME IS IN PROGRESS
     O GAME IS OVER AND NO RESULT
