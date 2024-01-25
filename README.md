@@ -1,1 +1,1 @@
-Small projects in C++ and Python
+I have shared some C++ and Python projects I did using what I learned
