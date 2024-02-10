@@ -1,1 +1,1 @@
-I have shared some C++ and Python projects I did using what I learned
+I have shared some Python projects I worked on using what I learned
